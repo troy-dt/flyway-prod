@@ -4,5 +4,25 @@ services:
     image: d1g1talterrain/flyway:0.0.1
     volumes:
       - /src/flyway:/app/flyway
-    env_file:
-      - stack.env
+    environment:
+      - PATH=${PATH}
+      - ASPNETCORE_URLS=${ASPNETCORE_URLS}
+      - DOTNET_RUNNING_IN_CONTAINER=${DOTNET_RUNNING_IN_CONTAINER}
+      - DOTNET_VERSION=${DOTNET_VERSION}
+      - PLAYBOOK_FILE=${PLAYBOOK_FILE}
+      - DB_HOST_DEFAULT=${DB_HOST_DEFAULT}
+      - DB_USERNAME_DEFAULT=${DB_USERNAME_DEFAULT}
+      - DB_PASSWORD_DEFAULT=${DB_PASSWORD_DEFAULT}
+      - Target_DB=${Target_DB}
+      - DT_GITHUB_TOKEN=${DT_GITHUB_TOKEN}
+      - DT_HOSTS=${DT_HOSTS}
+      - DT_HOST_FLYWAY_REPO=${DT_HOST_FLYWAY_REPO}
+      - DT_HOST_DOCKER_REPO=${DT_HOST_DOCKER_REPO}
+      - ansible_user=${ansible_user}
+      - ansible_password=${ansible_password}
+      - ansible_become_pass=${ansible_become_pass}
+      - Command=${Command}
+      - EMAIL_RECIPIENT=${EMAIL_RECIPIENT}
+      - EMAIL_SENDER=${EMAIL_SENDER}
+      - EMAIL_USERNAME=${EMAIL_USERNAME}
+      - EMAIL_PASSWORD=${EMAIL_PASSWORD}

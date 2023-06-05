@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  flyway:
+    container_name: redgate-flyway
+    image: redgate/flyway:9.1.4
+    environment:
+      - FLYWAY_EDITION=enterprise
+      - flyway_target_db=${flyway_target_db}
+    command: ${flyway_command}
+    volumes:
+      - ./ManageDatabase_Flyway/migrations:/flyway/sql
+      - ./flyway/conf:/flyway/conf
+

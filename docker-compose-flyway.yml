@@ -9,6 +9,6 @@ services:
       - flyway_target_db=${flyway_target_db}
     command: ${flyway_command}
     volumes:
-      - ./ManageDatabase_Flyway/migrations:/flyway/sql
-      - ./flyway/conf:/flyway/conf
+      - ./migrations:/flyway/sql
+      - ./:/flyway/conf
 

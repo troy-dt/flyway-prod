@@ -1,0 +1,7 @@
+version: "3"
+services:
+  ansible-compiler:
+    image: d1g1talterrain/flyway:0.0.2
+    volumes:
+      - /src/flyway:/app/flyway
+

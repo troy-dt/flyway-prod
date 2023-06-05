@@ -4,4 +4,5 @@ services:
     image: d1g1talterrain/flyway:0.0.1
     volumes:
       - /src/flyway:/app/flyway
-
+    env_file:
+      - stack.env
